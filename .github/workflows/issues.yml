@@ -1,0 +1,11 @@
+name: listen to issues
+on:
+  issues:
+    types: [opened, edited, deleted]
+jobs:
+  issue-listener:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output issue event details
+        run: echo "Issue event received ${{ toJSON(github.event.action) }} for issue #${{ toJSON(github.event.issue.number)}}"
+        
