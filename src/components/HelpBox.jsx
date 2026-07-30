@@ -8,5 +8,5 @@ function HelpBox({ title, text }) {
     </article>
   );
 }
-
+// this is commment added 
 export default HelpBox;
